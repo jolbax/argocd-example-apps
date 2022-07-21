@@ -2,8 +2,8 @@ apiVersion: v1
 kind: Service
 metadata:
   labels:
-    app: spring-petclinic
-  name: spring-petclinic
+    app: spring-petclinic-cmp
+  name: spring-petclinic-cmp
 spec:
   ports:
   - name: 8080-tcp
@@ -19,6 +19,6 @@ spec:
     protocol: TCP
     targetPort: 8778
   selector:
-    app: spring-petclinic
+    app: spring-petclinic-cmp
   sessionAffinity: None
   type: ClusterIP

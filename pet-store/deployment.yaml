@@ -3,25 +3,25 @@ kind: Deployment
 metadata:
   annotations:
   labels:
-    app: spring-petclinic
+    app: spring-petclinic-cmp
     app.kubernetes.io/component: web
-    app.kubernetes.io/instance: spring-petclinic
-    app.kubernetes.io/name: spring-petclinic
-    app.kubernetes.io/part-of: spring-petclinic
+    app.kubernetes.io/instance: spring-petclinic-cmp
+    app.kubernetes.io/name: spring-petclinic-cmp
+    app.kubernetes.io/part-of: spring-petclinic-cmp
     app.openshift.io/runtime: java
-  name: spring-petclinic
+  name: spring-petclinic-cmp
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: spring-petclinic
+      app: spring-petclinic-cmp
   template:
     metadata:
       labels:
-        app: spring-petclinic
+        app: spring-petclinic-cmp
     spec:
       containers:
-      - name: spring-petclinic
+      - name: spring-petclinic-cmp
         imagePullPolicy: Always
         image: quay.io/service-binding/spring-petclinic:latest
         livenessProbe:
